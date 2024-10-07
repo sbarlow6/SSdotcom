@@ -1,0 +1,19 @@
+/* .box {
+    background-color: green;
+} */
+.banner {
+    background-image: url('/assets/images/banner.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+}
+.logo {
+    width: 100%;
+}
+.linkbutton {
+    color: white;
+}
+.buttonholder{
+    text-align: center;
+    height: 33px;
+    margin: 12px 0px;
+}

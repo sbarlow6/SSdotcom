@@ -1,19 +1,39 @@
 /* .box {
     background-color: green;
 } */
+
 .banner {
     background-image: url('/assets/images/banner.jpg');
     background-size: cover; /* Adjust as needed */
     background-repeat: no-repeat; /* Adjust as needed */
+}
+.maincontent {
+    background-color: #ebcfae;
+    margin: 10px;
+    border-radius: 10px;
 }
 .logo {
     width: 100%;
 }
 .linkbutton {
     color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
 }
 .buttonholder{
     text-align: center;
     height: 33px;
     margin: 12px 0px;
+}
+.item {
+    width: 150px;
+}
+.itemicon {
+    text-align: center;
+}
+h2 {
+    font-family: 'SorcerySlam';
+    margin: 10px 0px;
 }

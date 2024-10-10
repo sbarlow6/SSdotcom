@@ -1,1 +1,11 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+    font-family: 'SorcerySlam';
+    src: url('/assets/fonts/Sorcery-Slam-Regular-5.otf') format('opentype');
+  }
+body {
+    background-image:url('/assets/images/pieceOverlay.png'), url('/assets/images/cavebg.png');
+    background-attachment: fixed;
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+}

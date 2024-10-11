@@ -6,6 +6,10 @@
     background-image: url('/assets/images/banner.jpg');
     background-size: cover; /* Adjust as needed */
     background-repeat: no-repeat; /* Adjust as needed */
+    
+}
+p {
+    font-family: 'SourceSans';
 }
 .maincontent {
     background-color: #ebcfae;
@@ -21,6 +25,16 @@
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
+    font-family: 'SourceSans';
+    text-wrap: nowrap;
+    transition: background-color 1s;
+    transition: color 1s;
+}
+.linkbutton:hover {
+    background-color: yellow;
+    color: black;
+    transition: background-color 1s;
+    transition: color 1s;
 }
 .buttonholder{
     text-align: center;
@@ -28,12 +42,29 @@
     margin: 12px 0px;
 }
 .item {
-    width: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    
 }
 .itemicon {
     text-align: center;
 }
-h2 {
+h2, h3, h4, h5 {
     font-family: 'SorcerySlam';
     margin: 10px 0px;
+}
+h3 {
+    color: white;
+}
+.itemtablerow {
+    /* height: 183px; */
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 5px 0px;
+    background-color: brown;
+}
+.itemtablerow p {
+    font-size: 18px;
+    color: white;
+    vertical-align: middle;
 }

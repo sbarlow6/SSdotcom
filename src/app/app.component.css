@@ -34,27 +34,84 @@ p {
 }
 .linkbutton {
     color: white;
-    background-color: black;
-    padding: 12px 20px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    padding: 10px 16px;
+    border-radius: 25px;
     text-decoration: none;
     font-family: 'SourceSans';
     text-wrap: nowrap;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 140px;
+}
+
+.linkbutton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.linkbutton:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-icon {
+    font-size: 16px;
+    transition: transform 0.3s;
+}
+
+.btn-text {
     font-weight: 600;
 }
-.linkbutton:hover {
-    background-color: #FFD700;
-    color: black;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 15px rgba(255, 215, 0, 0.3);
+
+.trailer-btn {
+    background: linear-gradient(135deg, #ff4e00, #ff8c00);
 }
+
+.trailer-btn:hover {
+    background: linear-gradient(135deg, #ff6b35, #ffa500);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 78, 0, 0.4);
+}
+
+.trailer-btn:hover .btn-icon {
+    transform: scale(1.2);
+}
+
+.steam-btn {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.steam-btn:hover {
+    background: linear-gradient(135deg, #171c3a, #1b263b);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 26, 46, 0.5);
+}
+
+.steam-btn:hover .btn-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
 .linkbutton:active {
-    transform: translateY(0) scale(1.02);
+    transform: translateY(0) scale(0.98);
 }
 .buttonholder{
     text-align: center;
@@ -117,4 +174,81 @@ h3 {
     align-items: center;
     min-height: 150px;
     padding: 20px;
+}
+
+/* Social Links Styling */
+.social-section {
+    padding: 30px 20px;
+}
+
+.social-link {
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.05));
+    border: 2px solid rgba(0,0,0,0.1);
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.social-link:hover::before {
+    transform: translateX(100%);
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-color: rgba(0,0,0,0.3);
+}
+
+.social-link h2 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+.social-link:hover h2 {
+    color: #000;
+}
+
+.social-subtitle {
+    color: #666;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.discord-link:hover {
+    background: linear-gradient(135deg, rgba(114,137,218,0.2), rgba(114,137,218,0.1));
+    border-color: #7289DA;
+}
+
+.discord-link:hover h2 {
+    color: #7289DA;
+}
+
+.twitter-link:hover {
+    background: linear-gradient(135deg, rgba(29,161,242,0.2), rgba(29,161,242,0.1));
+    border-color: #1DA1F2;
+}
+
+.twitter-link:hover h2 {
+    color: #1DA1F2;
 }
